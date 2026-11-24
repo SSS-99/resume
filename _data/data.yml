@@ -82,6 +82,52 @@ experiences:
     - role: Emoba inc.
       time: 2020/06 - Present
       project:
+        - name: Identity Provider Integration and ID Management for a FinTech Securities Company
+          details: |
+            - Project scale
+              - Average team of 10 people
+            - Role
+              - Design, Coding, Testing, Operations
+            - Technology Stack
+              - Java
+              - Spring Boot
+              - Spring Security
+              - Spring Data JPA
+              - Thymeleaf
+              - Gradle
+              - MySQL
+              - Flyway
+              - Redis
+              - Terraform
+              - TypeScript/JavaScript
+              - Node.js
+              - React
+              - Vite
+
+        - name: LLM-powered Sales Support Tool
+          details: |
+            - Project scale
+              - Average team of 10-15 people
+            - Role
+              - Project Management, Code Review
+            - Technology Stack
+              - TypeScript
+              - Node.js
+              - SvelteKit
+              - Hono
+              - Cloudflare Workers
+              - Cloudflare D1
+              - Workers KV
+              - Cloudflare R2
+              - Workers AI
+              - Cloudflare Browser Rendering
+              - Amazon Bedrock
+              - SuperTokens
+              - Biome
+              - Vitest
+              - Playwright
+              - GitHub Actions
+
         - name: Token Community System
           details: |
             - Project scale
@@ -266,10 +312,15 @@ skills:
         details:  |
           - .NET/.NET Core/.NET framework
           - Spring Boot/Spring Framework
+            - Spring Security
+            - Spring Data JPA
+            - Thymeleaf
+          - Hono
           - Laravel
           - Firebase
           - React
           - Vue.js/Nuxt
+          - SvelteKit
           - Flutter(Hobby)
 
       - name: Clouds, etc.
@@ -285,6 +336,14 @@ skills:
             - SAM
             - Amplify
             - Cognito
+            - Bedrock
+          - Cloudflare
+            - Workers
+            - D1
+            - Workers KV
+            - R2
+            - Workers AI
+            - Browser Rendering
           - GCP
             - GAE
             - GCE
@@ -301,6 +360,34 @@ skills:
             - Cloud Firestore
             - Cloud Storage
             - Cloud Functions
+          - Terraform
+
+      - name: Databases
+        details: |
+          - MySQL
+          - SQL Server
+          - Oracle
+          - Redis
+          - Flyway
+
+      - name: Tools
+        details: |
+          - Build
+            - Gradle
+            - Vite
+          - Testing
+            - Vitest
+            - Playwright
+          - Lint/Format
+            - Biome
+          - CI/CD
+            - GitHub Actions
+            - Azure DevOps
+          - Authentication
+            - Auth0
+            - SuperTokens
+          - Monitoring
+            - Datadog
 
       - name: BlockChain
         details: |
