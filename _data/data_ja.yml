@@ -31,39 +31,39 @@ companies:
 projects:
     idp-securities:
         name: FinTech系証券会社向け 認証基盤連携・ID管理
-        scale: 平均10名
+        scale: 約10名
         role: 設計、実装、テスト、運用
     llm-sales:
         name: LLMを活用したセールス支援ツール
-        scale: 平均10〜15名
+        scale: 約10〜15名
         role: プロジェクト推進、レビュー
     token-community:
         name: トークンコミュニティシステム
-        scale: 平均10名
+        scale: 約10名
         role: 設計、実装、レビュー
     crypto-exchange-analysis:
         name: 暗号資産交換業者向け 要件分析
-        scale: 平均10名
+        scale: 約10名
         role: 分析
     account-management:
         name: 金融機関向け アカウント管理システム
-        scale: 平均10名
+        scale: 約10名
         role: 設計、実装
     orthodontic-rd:
         name: 歯科矯正の研究開発プロジェクト
-        scale: 平均3名
+        scale: 約3名
         role: 調査・研究、設計、実装
     crypto-wallet:
         name: 暗号資産ウォレットシステム
-        scale: 平均10名（スクラム）
+        scale: 約10名（スクラム）
         role: 設計、実装
     data-lake:
         name: FinTech企業向け ビッグデータ蓄積用データレイク構築
-        scale: 平均2名（スクラム）
+        scale: 約2名（スクラム）
         role: 設計、実装
     job-matching:
         name: 就活生と企業のマッチングサービス
-        scale: 平均2名（スクラム）
+        scale: 約2名（スクラム）
         role: 設計、実装
     deployment-env:
         name: デプロイ環境構築
