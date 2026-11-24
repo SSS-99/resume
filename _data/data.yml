@@ -83,165 +83,64 @@ experiences:
       time: 2020/06 - Present
       project:
         - name: Identity Provider Integration and ID Management for a FinTech Securities Company
-          details: |
-            - Project scale
-              - Average team of 10 people
-            - Role
-              - Design, Coding, Testing, Operations
-            - Technology Stack
-              - Java
-              - Spring Boot
-              - Spring Security
-              - Spring Data JPA
-              - Thymeleaf
-              - Gradle
-              - MySQL
-              - Flyway
-              - Redis
-              - Terraform
-              - TypeScript/JavaScript
-              - Node.js
-              - React
-              - Vite
+          scale: Avg. 10 people
+          role: Design, Coding, Testing, Operations
+          stack: [Java, Spring Boot, Spring Security, Spring Data JPA, Thymeleaf, Gradle, MySQL, Flyway, Redis, Terraform, TypeScript/JavaScript, Node.js, React, Vite]
 
         - name: LLM-powered Sales Support Tool
-          details: |
-            - Project scale
-              - Average team of 10-15 people
-            - Role
-              - Project Management, Code Review
-            - Technology Stack
-              - TypeScript
-              - Node.js
-              - SvelteKit
-              - Hono
-              - Cloudflare Workers
-              - Cloudflare D1
-              - Workers KV
-              - Cloudflare R2
-              - Workers AI
-              - Cloudflare Browser Rendering
-              - Amazon Bedrock
-              - SuperTokens
-              - Biome
-              - Vitest
-              - Playwright
-              - GitHub Actions
+          scale: Avg. 10-15 people
+          role: Project Management, Code Review
+          stack: [TypeScript, Node.js, SvelteKit, Hono, Cloudflare Workers, Cloudflare D1, Workers KV, Cloudflare R2, Workers AI, Cloudflare Browser Rendering, Amazon Bedrock, SuperTokens, Biome, Vitest, Playwright, GitHub Actions]
 
         - name: Token Community System
-          details: |
-            - Project scale
-              - Average team of 10 people
-            - Role
-              - Design, Coding, Reviewer
-            - Technology Stack
-              - TypeScript
-              - Vue.js/Nuxt
-              - Firebase
+          scale: Avg. 10 people
+          role: Design, Coding, Reviewer
+          stack: [TypeScript, Vue.js/Nuxt, Firebase]
 
         - name: Requirement Analysis for Cryptoasset Exchange Service Providers
-          details: |
-            - Project scale
-              - Average team of 10 people
-            - Role
-              - Analysis
+          scale: Avg. 10 people
+          role: Analysis
 
         - name: Account Management System for Financial Institution
-          details: |
-            - Project scale
-              - Average team of 10 people
-            - Role
-              - Design, Coding
-            - Technology Stack
-              - TypeScript
-              - Vue.js/Nuxt
-              - React
-              - Java
-              - Spring Boot
-              - Cognito
-              - ECS
+          scale: Avg. 10 people
+          role: Design, Coding
+          stack: [TypeScript, Vue.js/Nuxt, React, Java, Spring Boot, Cognito, ECS]
 
         - name: Orthodontic R&D Project
-          details: |
-            - Project scale
-              - Average team of 3 people
-            - Role
-              - Research, Design, Coding
-            - Technology Stack
-              - TypeScript
-              - Python
-              - ECR
-              - Sagemaker
-              - S3
+          scale: Avg. 3 people
+          role: Research, Design, Coding
+          stack: [TypeScript, Python, ECR, SageMaker, S3]
 
         - name: Cryptocurrency Wallet System
-          details: |
-            - Project scale
-              - Scrum development with an average team of 10 people
-            - Role
-              - Design, Coding
-            - Technology Stack
-              - .NET
-              - Python
-              - TypeScript
-              - Azure Cloud Services
-              - Azure Functions
-              - SQL Server
-              - Azure Service Bus
-              - Azure DevOps
-              - Datadog
+          scale: Avg. 10 people, Scrum
+          role: Design, Coding
+          stack: [.NET, Python, TypeScript, Azure Cloud Services, Azure Functions, SQL Server, Azure Service Bus, Azure DevOps, Datadog]
 
         - name: Building a Data lake to store Big data for Fintech company
-          details: |
-            - Project scale
-              - Scrum development with an average team of 2 people
-            - Role
-              - Design, Coding
-            - Technology Stack
-              - AWS Glue
-              - Athena
-              - Sage Maker
-              - Cloud Formation
-              - S3
+          scale: Avg. 2 people, Scrum
+          role: Design, Coding
+          stack: [AWS Glue, Athena, SageMaker, CloudFormation, S3]
 
         - name: Matching service between job-hunting students and companies
-          details: |
-            - Project scale
-              - Scrum development with an average team of 2 people
-            - Role
-              - Design, Coding
-            - Technology Stack
-              - PHP
-              - Laravel
-              - React
-              - GCP
+          scale: Avg. 2 people, Scrum
+          role: Design, Coding
+          stack: [PHP, Laravel, React, GCP]
+
     - role: Freelance
       time: 2020/05 - 2020/05
       project:
         - name: Deployment Environment
-          details: |
-            - Project scale
-              - Scrum development with a team of 1 person
-            - Role
-              - Infrastructure construction , Testing
-            - Technology Stack
-              - C#
-              - Azure
+          scale: 1 person, Scrum
+          role: Infrastructure construction, Testing
+          stack: [C#, Azure]
+
     - role: Simplex Inc.
       time: 2017/04 - 2020/04
       project:
         - name: FX Trade System
-          details: |
-            - Project scale
-              - Waterfall development with a team of 20-30 people
-            - Role
-              - Analysis, Design, Coding, Testing
-            - Technology Stack
-              - Spring Framework
-              - Java
-              - Oracle
-              - Ansible
-              - JP1
+          scale: 20-30 people, Waterfall
+          role: Analysis, Design, Coding, Testing
+          stack: [Spring Framework, Java, Oracle, Ansible, JP1]
 
 
 # projects:
@@ -296,112 +195,58 @@ experiences:
 skills:
     title: Technology Stack
 
+    # Each item: a plain string, or { name, items: [...] } to make it
+    # expandable on the web (sub-items are hidden in the PDF).
     toolset:
       - name: Language
-        details: |
-          - JavaScript/TypeScript
-            - Node.js
+        items:
+          - name: JavaScript/TypeScript
+            items: [Node.js]
           - Python
           - Java
           - PHP
           - C#
-          - C++/C(Hobby)
-          - Solidity(Hobby)
+          - C++/C (Hobby)
+          - Solidity (Hobby)
 
       - name: Frameworks
-        details:  |
-          - .NET/.NET Core/.NET framework
-          - Spring Boot/Spring Framework
-            - Spring Security
-            - Spring Data JPA
-            - Thymeleaf
+        items:
+          - name: Spring Boot/Spring Framework
+            items: [Spring Security, Spring Data JPA, Thymeleaf]
           - Hono
-          - Laravel
-          - Firebase
           - React
           - Vue.js/Nuxt
           - SvelteKit
-          - Flutter(Hobby)
+          - Laravel
+          - .NET/.NET Core/.NET Framework
+          - Firebase
+          - Flutter (Hobby)
 
       - name: Clouds, etc.
-        details: |
-          - AWS
-            - EC2
-            - ECS
-            - ECR
-            - Lambda
-            - Glue
-            - Athena
-            - Cloud Formation
-            - SAM
-            - Amplify
-            - Cognito
-            - Bedrock
-          - Cloudflare
-            - Workers
-            - D1
-            - Workers KV
-            - R2
-            - Workers AI
-            - Browser Rendering
-          - GCP
-            - GAE
-            - GCE
-            - BigQuery
-            - Cloud Functions
-            - Firebase
-          - Azure
-            - Azure VM
-            - Azure Functions
-            - Azure Storage
-            - Azure SQL Database
-          - Firebase
-            - Firebase Authentication
-            - Cloud Firestore
-            - Cloud Storage
-            - Cloud Functions
+        items:
+          - name: AWS
+            items: [EC2, ECS, ECR, Lambda, Glue, Athena, CloudFormation, SAM, Amplify, Cognito, Bedrock]
+          - name: Cloudflare
+            items: [Workers, D1, Workers KV, R2, Workers AI, Browser Rendering]
+          - name: GCP
+            items: [GAE, GCE, BigQuery, Cloud Functions]
+          - name: Azure
+            items: [Azure VM, Azure Functions, Azure Storage, Azure SQL Database]
+          - name: Firebase
+            items: [Firebase Authentication, Cloud Firestore, Cloud Storage, Cloud Functions]
           - Terraform
 
       - name: Databases
-        details: |
-          - MySQL
-          - SQL Server
-          - Oracle
-          - Redis
-          - Flyway
+        items: [MySQL, SQL Server, Oracle, Redis, Flyway]
 
       - name: Tools
-        details: |
-          - Build
-            - Gradle
-            - Vite
-          - Testing
-            - Vitest
-            - Playwright
-          - Lint/Format
-            - Biome
-          - CI/CD
-            - GitHub Actions
-            - Azure DevOps
-          - Authentication
-            - Auth0
-            - SuperTokens
-          - Monitoring
-            - Datadog
+        items: [Gradle, Vite, Vitest, Playwright, Biome, GitHub Actions, Azure DevOps, Auth0, SuperTokens, Datadog]
 
       - name: BlockChain
-        details: |
-          - Bitcoin Based
-            - Bitcoin
-            - Bitcoin Cash
-            - Litecoin
-            - Monacoin
-          - Ethereum Based
-            - ERC20
-            - NFT(ERC721/ERC1155) (Hobby)
-            - Tools
-              - Hardhat (Hobby)
-              - Truffle (Hobby)
-              - Ganache
+        items:
+          - name: Bitcoin Based
+            items: [Bitcoin, Bitcoin Cash, Litecoin, Monacoin]
+          - name: Ethereum Based
+            items: [ERC20, NFT (ERC721/ERC1155) (Hobby), Hardhat (Hobby), Truffle (Hobby), Ganache]
           - Ripple
           - Stellar

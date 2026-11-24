@@ -1,0 +1,476 @@
+// Resume theme (option C: "Developer")
+
+$ink: #18181B;
+$ink-2: #3F3F46;
+$muted: #52525B;
+$line: #E4E4E7;
+$tag-line: #D4D4D8;
+$bg: #FFFFFF;
+$header-bg: #18181B;
+$header-ink: #FAFAFA;
+$header-accent: #86EFAC;
+$accent: #1D4ED8;
+
+$sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  color: $ink;
+  font-family: $sans;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+}
+
+// ---------- Header ----------
+
+.site-header {
+  background: $header-bg;
+  color: $header-ink;
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 96px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    font-family: $mono;
+    font-size: 16px;
+    color: $header-accent;
+  }
+
+  .contact {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    font-family: $mono;
+    font-size: 14px;
+
+    a {
+      color: #E4E4E7;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        color: #FFFFFF;
+        border-bottom-color: currentColor;
+      }
+    }
+  }
+
+  .contact__pdf a {
+    color: $header-accent;
+  }
+}
+
+// ---------- Layout ----------
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 96px 96px;
+  display: flex;
+  gap: 64px;
+}
+
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.aside {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-title {
+  font-family: $mono;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $muted;
+  margin-bottom: 20px;
+}
+
+// ---------- Experience ----------
+
+.company {
+  & + & {
+    margin-top: 48px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $ink;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__time {
+    flex-shrink: 0;
+    font-family: $mono;
+    font-size: 14px;
+    color: $accent;
+  }
+}
+
+.project {
+  padding: 24px 0;
+  border-bottom: 1px solid $line;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 2px;
+    font-size: 14px;
+    color: $ink-2;
+
+    .label {
+      color: $muted;
+      font-family: $mono;
+      font-size: 12px;
+      margin-right: 4px;
+    }
+  }
+
+  &__details {
+    font-size: 14px;
+    color: $ink-2;
+  }
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  li {
+    font-family: $mono;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 2px 8px;
+    border: 1px solid $tag-line;
+    border-radius: 4px;
+    color: $ink-2;
+  }
+}
+
+// ---------- Aside ----------
+
+.aside-item {
+  & + & {
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  font-size: 14px;
+  color: $ink-2;
+}
+
+.plain-list {
+  list-style: none;
+  padding: 0;
+}
+
+.muted {
+  color: $muted;
+}
+
+// Skills: top-level items as chips; groups expand on the web
+.skill-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  > li {
+    font-family: $mono;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 2px 8px;
+    border: 1px solid $tag-line;
+    border-radius: 4px;
+    color: $ink-2;
+  }
+
+  &__group {
+    &:has(details[open]) {
+      flex-basis: 100%;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: " +";
+        color: $accent;
+      }
+    }
+
+    details[open] summary::after {
+      content: " −";
+    }
+  }
+
+  &__sub {
+    margin-top: 4px;
+    padding: 4px 0 2px;
+    border-top: 1px dashed $tag-line;
+    font-family: $sans;
+    font-size: 13px;
+    color: $muted;
+  }
+}
+
+
+// ---------- Small screens ----------
+
+@media screen and (max-width: 860px) {
+  .site-header__inner {
+    padding: 40px 20px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header .name {
+    font-size: 38px;
+  }
+
+  .site-header .contact {
+    align-items: flex-start;
+  }
+
+  .layout {
+    padding: 40px 20px 64px;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .aside {
+    flex-basis: auto;
+  }
+
+  .company__head {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+// ---------- Print / PDF ----------
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 12mm 14mm;
+  }
+
+  body {
+    font-size: 10pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .site-header__inner {
+    padding: 0 0 6mm;
+  }
+
+  // Keep the dark header but sized for paper
+  .site-header {
+    padding: 8mm 8mm 0;
+    margin-bottom: 8mm;
+  }
+
+  .site-header .name {
+    font-size: 26pt;
+  }
+
+  .site-header .tagline,
+  .site-header .contact {
+    font-size: 9.5pt;
+  }
+
+  // The PDF itself doesn't need a "download PDF" link
+  .contact__pdf {
+    display: none;
+  }
+
+  .layout {
+    max-width: none;
+    padding: 0;
+    gap: 8mm;
+  }
+
+  .aside {
+    flex-basis: 52mm;
+    gap: 6mm;
+  }
+
+  .section-title {
+    font-size: 8.5pt;
+    margin-bottom: 3mm;
+  }
+
+  .company + .company {
+    margin-top: 6mm;
+  }
+
+  .company__name {
+    font-size: 14pt;
+  }
+
+  .company__time {
+    font-size: 9pt;
+  }
+
+  .company__head {
+    break-after: avoid;
+  }
+
+  .project {
+    padding: 3.5mm 0;
+    gap: 1.5mm;
+    break-inside: avoid;
+  }
+
+  .project__name {
+    font-size: 11pt;
+  }
+
+  .project__meta {
+    font-size: 9pt;
+  }
+
+  .tags {
+    gap: 1.2mm;
+  }
+
+  .tags li {
+    font-size: 7.5pt;
+    padding: 0 1.5mm;
+  }
+
+  .aside-item {
+    font-size: 8.5pt;
+    break-inside: avoid;
+  }
+
+  .aside-item h3 {
+    font-size: 9pt;
+  }
+
+  .aside-item + .aside-item {
+    margin-top: 3.5mm;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media print {
+  // Never leave a heading alone at the bottom of a page
+  .section-title {
+    break-after: avoid;
+  }
+
+  .aside-section {
+    break-inside: avoid;
+  }
+}
+
+@media print {
+  // In the PDF, show only top-level skills (no expand markers)
+  .skill-list > li {
+    font-size: 7.5pt;
+    padding: 0 1.5mm;
+  }
+
+  .skill-list__group summary::after {
+    content: none;
+  }
+
+  .skill-list__group:has(details[open]) {
+    flex-basis: auto;
+  }
+
+  .skill-list__sub {
+    display: none;
+  }
+}

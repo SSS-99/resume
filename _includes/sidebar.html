@@ -1,33 +1,28 @@
 {% assign sidebar = site.data.data.sidebar %}
-<div class="sidebar-wrapper">
+<aside class="aside">
+  {% include skills.html %}
 
-  <div class="profile-container">
+  {% if sidebar.languages or sidebar.interests %}
+  <section class="aside-section">
+    <h2 class="section-title">About</h2>
 
-    <!-- {% if sidebar.name %}
-    <img class="avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="profile picture" />
-    {% endif %} -->
-
-    {% if sidebar.name %}
-    <h1 class="name">{{ sidebar.name }}</h1>
+    {% if sidebar.languages %}
+    <div class="aside-item">
+      <h3>Languages</h3>
+      <ul class="plain-list">
+        {% for language in sidebar.languages %}<li>{{ language.idiom }} <span class="muted">({{ language.level }})</span></li>{% endfor %}
+      </ul>
+    </div>
     {% endif %}
 
-    {% if sidebar.tagline %}
-    <h3 class="tagline">{{ sidebar.tagline }}</h3>
+    {% if sidebar.interests %}
+    <div class="aside-item">
+      <h3>Interests</h3>
+      <ul class="plain-list">
+        {% for interest in sidebar.interests %}<li>{% if interest.link %}<a href="{{ interest.link }}">{{ interest.item }}</a>{% else %}{{ interest.item }}{% endif %}</li>{% endfor %}
+      </ul>
+    </div>
     {% endif %}
-
-  </div><!--//profile-container-->
-
-  {% include contact.html %}
-
-  {% if sidebar.education %}
-    {% include education.html %}
+  </section>
   {% endif %}
-
-  {% include language.html %}
-  {% include interests.html %}
-
-  {% if sidebar.about %}
-    {% include about.html %}
-  {% endif %}
-
-</div><!--//sidebar-wrapper-->
+</aside>
