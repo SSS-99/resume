@@ -28,7 +28,7 @@ sidebar:
       - item: Wine/Japanese Sake
 
 experiences:
-    - role: Emoba inc.
+    - company: Emoba inc.
       time: 2020/06 - Present
       project:
         - name: Identity Provider Integration and ID Management for a FinTech Securities Company
@@ -75,7 +75,7 @@ experiences:
           role: Design, Coding
           stack: [PHP, Laravel, React, GCP]
 
-    - role: Freelance
+    - company: Freelance
       time: 2020/05 - 2020/05
       project:
         - name: Deployment Environment
@@ -83,7 +83,7 @@ experiences:
           role: Infrastructure construction, Testing
           stack: [C#, Azure]
 
-    - role: Simplex Inc.
+    - company: Simplex Inc.
       time: 2017/04 - 2020/04
       project:
         - name: FX Trade System

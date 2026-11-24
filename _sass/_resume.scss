@@ -224,6 +224,9 @@ h1, h2, h3, h4, p, ul {
 // ---------- Aside ----------
 
 .aside-item {
+  font-size: 14px;
+  color: $ink-2;
+
   & + & {
     margin-top: 20px;
   }
@@ -233,9 +236,6 @@ h1, h2, h3, h4, p, ul {
     font-weight: 600;
     margin-bottom: 4px;
   }
-
-  font-size: 14px;
-  color: $ink-2;
 }
 
 .plain-list {
@@ -385,6 +385,11 @@ h1, h2, h3, h4, p, ul {
   .section-title {
     font-size: 8.5pt;
     margin-bottom: 3mm;
+    break-after: avoid; // never leave a heading alone at the bottom of a page
+  }
+
+  .aside-section {
+    break-inside: avoid;
   }
 
   .company + .company {
@@ -439,24 +444,7 @@ h1, h2, h3, h4, p, ul {
     margin-top: 3.5mm;
   }
 
-  a {
-    text-decoration: none;
-  }
-}
-
-@media print {
-  // Never leave a heading alone at the bottom of a page
-  .section-title {
-    break-after: avoid;
-  }
-
-  .aside-section {
-    break-inside: avoid;
-  }
-}
-
-@media print {
-  // In the PDF, show only top-level skills (no expand markers)
+  // Skills: only top-level items, no expand markers
   .skill-list > li {
     font-size: 7.5pt;
     padding: 0 1.5mm;
@@ -472,5 +460,9 @@ h1, h2, h3, h4, p, ul {
 
   .skill-list__sub {
     display: none;
+  }
+
+  a {
+    text-decoration: none;
   }
 }

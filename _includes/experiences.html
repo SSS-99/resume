@@ -6,20 +6,20 @@
   {% for experience in experiences %}
   <div class="company">
     <div class="company__head">
-      <h3 class="company__name">{{ experience.role }}</h3>
-      <span class="company__time">{{ experience.time }}</span>
+      <h3 class="company__name">{{ experience.company | escape }}</h3>
+      <span class="company__time">{{ experience.time | escape }}</span>
     </div>
 
     {% for project in experience.project %}
     <article class="project">
-      <h4 class="project__name">{{ project.name }}</h4>
+      <h4 class="project__name">{{ project.name | escape }}</h4>
       <p class="project__meta">
-        {% if project.scale %}<span><span class="label">Team</span> {{ project.scale }}</span>{% endif %}
-        {% if project.role %}<span><span class="label">Role</span> {{ project.role }}</span>{% endif %}
+        {% if project.scale %}<span><span class="label">Team</span> {{ project.scale | escape }}</span>{% endif %}
+        {% if project.role %}<span><span class="label">Role</span> {{ project.role | escape }}</span>{% endif %}
       </p>
       {% if project.stack %}
       <ul class="tags">
-        {% for tech in project.stack %}<li>{{ tech }}</li>{% endfor %}
+        {% for tech in project.stack %}<li>{{ tech | escape }}</li>{% endfor %}
       </ul>
       {% endif %}
       {% if project.details %}

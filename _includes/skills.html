@@ -4,18 +4,18 @@
   <h2 class="section-title">Skills</h2>
   {% for skill in skills.toolset %}
   <div class="aside-item">
-    <h3>{{ skill.name }}</h3>
+    <h3>{{ skill.name | escape }}</h3>
     <ul class="skill-list">
       {% for item in skill.items %}
         {% if item.items %}
         <li class="skill-list__group">
           <details>
-            <summary>{{ item.name }}</summary>
-            <p class="skill-list__sub">{{ item.items | join: ", " }}</p>
+            <summary>{{ item.name | escape }}</summary>
+            <p class="skill-list__sub">{{ item.items | join: ", " | escape }}</p>
           </details>
         </li>
         {% else %}
-        <li>{{ item }}</li>
+        <li>{{ item | escape }}</li>
         {% endif %}
       {% endfor %}
     </ul>

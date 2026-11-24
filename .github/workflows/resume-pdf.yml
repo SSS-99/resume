@@ -3,8 +3,16 @@ name: Generate resume PDF
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - assets/resume.pdf
+    # Only when something that affects the rendered page changes
+    paths:
+      - _data/**
+      - _includes/**
+      - _layouts/**
+      - _sass/**
+      - assets/css/**
+      - index.html
+      - _config.yml
+      - .github/workflows/resume-pdf.yml
   workflow_dispatch:
 
 permissions:
