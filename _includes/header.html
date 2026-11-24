@@ -1,19 +1,26 @@
-{% assign sidebar = site.data.data.sidebar %}
+{% include i18n.html %}
 <header class="site-header">
   <div class="site-header__inner">
+    <nav class="lang-switch web-only" aria-label="Language">
+      <a href="{{ site.baseurl }}/" hreflang="en" lang="en"{% if lang == "en" %} aria-current="page"{% endif %}>EN</a>
+      <a href="{{ site.baseurl }}/ja/" hreflang="ja" lang="ja"{% if lang == "ja" %} aria-current="page"{% endif %}>JA</a>
+    </nav>
+
     <div class="site-header__title">
-      <h1 class="name">{{ sidebar.name | escape }}</h1>
-      {% if sidebar.tagline %}<p class="tagline">{{ sidebar.tagline | escape }}</p>{% endif %}
+      <h1 class="name">{{ side.name | default: base.name | escape }}</h1>
+      {% assign tagline = side.tagline | default: base.tagline %}
+      {% if tagline %}<p class="tagline">{{ tagline | escape }}</p>{% endif %}
     </div>
 
     <ul class="contact">
-      {% if sidebar.email %}<li><a href="mailto:{{ sidebar.email | escape }}">{{ sidebar.email | escape }}</a></li>{% endif %}
-      {% if sidebar.phone %}<li><a href="tel:{{ sidebar.phone | escape }}">{{ sidebar.phone | escape }}</a></li>{% endif %}
-      {% if sidebar.website %}<li><a href="https://{{ sidebar.website | escape }}">{{ sidebar.website | escape }}</a></li>{% endif %}
-      {% if sidebar.github %}<li><a href="https://github.com/{{ sidebar.github | escape }}">github.com/{{ sidebar.github | escape }}</a></li>{% endif %}
-      {% if sidebar.linkedin %}<li><a href="https://linkedin.com/in/{{ sidebar.linkedin | escape }}">linkedin.com/in/{{ sidebar.linkedin | escape }}</a></li>{% endif %}
-      {% if sidebar.twitter %}<li><a href="https://twitter.com/{{ sidebar.twitter | escape }}">@{{ sidebar.twitter | escape }}</a></li>{% endif %}
-      {% if sidebar.pdf %}<li class="contact__pdf"><a href="{{ sidebar.pdf | escape }}">Download PDF ↓</a></li>{% endif %}
+      {% if base.email %}<li><a href="mailto:{{ base.email | escape }}">{{ base.email | escape }}</a></li>{% endif %}
+      {% if base.phone %}<li><a href="tel:{{ base.phone | escape }}">{{ base.phone | escape }}</a></li>{% endif %}
+      {% if base.website %}<li><a href="https://{{ base.website | escape }}">{{ base.website | escape }}</a></li>{% endif %}
+      {% if base.github %}<li><a href="https://github.com/{{ base.github | escape }}">github.com/{{ base.github | escape }}</a></li>{% endif %}
+      {% if base.linkedin %}<li><a href="https://linkedin.com/in/{{ base.linkedin | escape }}">linkedin.com/in/{{ base.linkedin | escape }}</a></li>{% endif %}
+      {% if base.twitter %}<li><a href="https://twitter.com/{{ base.twitter | escape }}">@{{ base.twitter | escape }}</a></li>{% endif %}
+      {% assign pdf = side.pdf | default: base.pdf %}
+      {% if pdf %}<li class="web-only contact__pdf"><a href="{{ pdf | escape }}">{{ L.download_pdf }}</a></li>{% endif %}
     </ul>
   </div>
 </header>

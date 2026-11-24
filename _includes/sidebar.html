@@ -1,25 +1,27 @@
-{% assign sidebar = site.data.data.sidebar %}
+{% include i18n.html %}
+{% assign languages = side.languages | default: base.languages %}
+{% assign interests = side.interests | default: base.interests %}
 <aside class="aside">
   {% include skills.html %}
 
-  {% if sidebar.languages or sidebar.interests %}
+  {% if languages or interests %}
   <section class="aside-section">
-    <h2 class="section-title">About</h2>
+    <h2 class="section-title">{{ L.about }}</h2>
 
-    {% if sidebar.languages %}
+    {% if languages %}
     <div class="aside-item">
-      <h3>Languages</h3>
+      <h3>{{ L.languages }}</h3>
       <ul class="plain-list">
-        {% for language in sidebar.languages %}<li>{{ language.idiom | escape }} <span class="muted">({{ language.level | escape }})</span></li>{% endfor %}
+        {% for language in languages %}<li>{{ language.idiom | escape }} <span class="muted">({{ language.level | escape }})</span></li>{% endfor %}
       </ul>
     </div>
     {% endif %}
 
-    {% if sidebar.interests %}
+    {% if interests %}
     <div class="aside-item">
-      <h3>Interests</h3>
+      <h3>{{ L.interests }}</h3>
       <ul class="plain-list">
-        {% for interest in sidebar.interests %}<li>{% if interest.link %}<a href="{{ interest.link }}">{{ interest.item | escape }}</a>{% else %}{{ interest.item | escape }}{% endif %}</li>{% endfor %}
+        {% for interest in interests %}<li>{% if interest.link %}<a href="{{ interest.link | escape }}">{{ interest.item | escape }}</a>{% else %}{{ interest.item | escape }}{% endif %}</li>{% endfor %}
       </ul>
     </div>
     {% endif %}

@@ -1,10 +1,11 @@
+{% include i18n.html %}
 {% assign skills = site.data.data.skills %}
 {% if skills %}
 <section class="aside-section">
-  <h2 class="section-title">Skills</h2>
+  <h2 class="section-title">{{ L.skills }}</h2>
   {% for skill in skills.toolset %}
   <div class="aside-item">
-    <h3>{{ skill.name | escape }}</h3>
+    <h3>{{ tr.skill_groups[skill.name] | default: skill.name | escape }}</h3>
     <ul class="skill-list">
       {% for item in skill.items %}
         {% if item.items %}

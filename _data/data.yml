@@ -28,65 +28,79 @@ sidebar:
       - item: Wine/Japanese Sake
 
 experiences:
-    - company: Emoba inc.
+    - id: emoba
+      company: Emoba inc.
       time: 2020/06 - Present
       project:
-        - name: Identity Provider Integration and ID Management for a FinTech Securities Company
+        - id: idp-securities
+          name: Identity Provider Integration and ID Management for a FinTech Securities Company
           scale: Avg. 10 people
           role: Design, Coding, Testing, Operations
           stack: [Java, Spring Boot, Spring Security, Spring Data JPA, Thymeleaf, Gradle, MySQL, Flyway, Redis, Terraform, TypeScript/JavaScript, Node.js, React, Vite]
 
-        - name: LLM-powered Sales Support Tool
+        - id: llm-sales
+          name: LLM-powered Sales Support Tool
           scale: Avg. 10-15 people
           role: Project Management, Code Review
           stack: [TypeScript, Node.js, SvelteKit, Hono, Cloudflare Workers, Cloudflare D1, Workers KV, Cloudflare R2, Workers AI, Cloudflare Browser Rendering, Amazon Bedrock, SuperTokens, Biome, Vitest, Playwright, GitHub Actions]
 
-        - name: Token Community System
+        - id: token-community
+          name: Token Community System
           scale: Avg. 10 people
           role: Design, Coding, Reviewer
           stack: [TypeScript, Vue.js/Nuxt, Firebase]
 
-        - name: Requirement Analysis for Cryptoasset Exchange Service Providers
+        - id: crypto-exchange-analysis
+          name: Requirement Analysis for Cryptoasset Exchange Service Providers
           scale: Avg. 10 people
           role: Analysis
 
-        - name: Account Management System for Financial Institution
+        - id: account-management
+          name: Account Management System for Financial Institution
           scale: Avg. 10 people
           role: Design, Coding
           stack: [TypeScript, Vue.js/Nuxt, React, Java, Spring Boot, Cognito, ECS]
 
-        - name: Orthodontic R&D Project
+        - id: orthodontic-rd
+          name: Orthodontic R&D Project
           scale: Avg. 3 people
           role: Research, Design, Coding
           stack: [TypeScript, Python, ECR, SageMaker, S3]
 
-        - name: Cryptocurrency Wallet System
+        - id: crypto-wallet
+          name: Cryptocurrency Wallet System
           scale: Avg. 10 people, Scrum
           role: Design, Coding
           stack: [.NET, Python, TypeScript, Azure Cloud Services, Azure Functions, SQL Server, Azure Service Bus, Azure DevOps, Datadog]
 
-        - name: Building a Data lake to store Big data for Fintech company
+        - id: data-lake
+          name: Building a Data lake to store Big data for Fintech company
           scale: Avg. 2 people, Scrum
           role: Design, Coding
           stack: [AWS Glue, Athena, SageMaker, CloudFormation, S3]
 
-        - name: Matching service between job-hunting students and companies
+        - id: job-matching
+          name: Matching service between job-hunting students and companies
           scale: Avg. 2 people, Scrum
           role: Design, Coding
           stack: [PHP, Laravel, React, GCP]
 
-    - company: Freelance
+    - id: freelance
+      company: Freelance
       time: 2020/05 - 2020/05
       project:
-        - name: Deployment Environment
+        - id: deployment-env
+          name: Deployment Environment
           scale: 1 person, Scrum
           role: Infrastructure construction, Testing
           stack: [C#, Azure]
 
-    - company: Simplex Inc.
+    - id: simplex
+      company: Simplex Inc.
       time: 2017/04 - 2020/04
       project:
-        - name: FX Trade System
+        - id: fx-trade
+          name: FX Trade System
           scale: 20-30 people, Waterfall
           role: Analysis, Design, Coding, Testing
           stack: [Spring Framework, Java, Oracle, Ansible, JP1]

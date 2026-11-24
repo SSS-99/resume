@@ -1,0 +1,14 @@
+{%- comment -%}
+  Sets up language-aware variables. Include at the top of any include that shows text.
+    lang  : page language (front matter `lang:`, default "en")
+    L     : UI labels from _data/labels.yml
+    tr    : translation overrides (_data/data_<lang>.yml), nil for English
+    base  : English sidebar data
+    side  : translated sidebar data (may be nil)
+{%- endcomment -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign L = site.data.labels[lang] | default: site.data.labels.en -%}
+{%- assign tr_key = "data_" | append: lang -%}
+{%- assign tr = site.data[tr_key] -%}
+{%- assign base = site.data.data.sidebar -%}
+{%- assign side = tr.sidebar -%}

@@ -1,0 +1,84 @@
+# Japanese overrides for /ja/.
+# Anything not listed here falls back to _data/data.yml
+# (tech stacks and skills are shared with the English version).
+# Keys under `companies` / `projects` match the `id` fields in data.yml.
+
+sidebar:
+    # name: 小澤 栞   # uncomment to show a Japanese name
+    tagline: ITコンサルタント / エンジニア
+    pdf: https://sss-99.github.io/resume/assets/resume-ja.pdf
+
+    languages:
+      - idiom: 日本語
+        level: ネイティブ
+      - idiom: 英語
+        level: 日常会話
+
+    interests:
+      - item: トレイルランニング
+      - item: フラワーアレンジメント
+      - item: ワイン・日本酒
+
+companies:
+    emoba:
+        company: Emoba inc.
+        time: 2020/06 - 現在
+    freelance:
+        company: フリーランス
+    simplex:
+        company: シンプレクス株式会社
+
+projects:
+    idp-securities:
+        name: FinTech系証券会社向け 認証基盤連携・ID管理
+        scale: 平均10名
+        role: 設計、実装、テスト、運用
+    llm-sales:
+        name: LLMを活用したセールス支援ツール
+        scale: 平均10〜15名
+        role: プロジェクト推進、レビュー
+    token-community:
+        name: トークンコミュニティシステム
+        scale: 平均10名
+        role: 設計、実装、レビュー
+    crypto-exchange-analysis:
+        name: 暗号資産交換業者向け 要件分析
+        scale: 平均10名
+        role: 分析
+    account-management:
+        name: 金融機関向け アカウント管理システム
+        scale: 平均10名
+        role: 設計、実装
+    orthodontic-rd:
+        name: 歯科矯正の研究開発プロジェクト
+        scale: 平均3名
+        role: 調査・研究、設計、実装
+    crypto-wallet:
+        name: 暗号資産ウォレットシステム
+        scale: 平均10名（スクラム）
+        role: 設計、実装
+    data-lake:
+        name: FinTech企業向け ビッグデータ蓄積用データレイク構築
+        scale: 平均2名（スクラム）
+        role: 設計、実装
+    job-matching:
+        name: 就活生と企業のマッチングサービス
+        scale: 平均2名（スクラム）
+        role: 設計、実装
+    deployment-env:
+        name: デプロイ環境構築
+        scale: 1名（スクラム）
+        role: インフラ構築、テスト
+    fx-trade:
+        name: FX取引システム
+        scale: 20〜30名（ウォーターフォール）
+        role: 分析、設計、実装、テスト
+
+# Skill group headings (items themselves are shared)
+skill_groups:
+    Language: 言語
+    Frameworks: フレームワーク
+    Clouds, etc.: クラウド等
+    Databases: データベース
+    Tools: ツール
+    BlockChain: ブロックチェーン

@@ -11,8 +11,8 @@ $header-ink: #FAFAFA;
 $header-accent: #86EFAC;
 $accent: #1D4ED8;
 
-$sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-$mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+$sans: 'IBM Plex Sans', 'IBM Plex Sans JP', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, 'IBM Plex Sans JP', monospace;
 
 *,
 *::before,
@@ -48,6 +48,7 @@ h1, h2, h3, h4, p, ul {
   color: $header-ink;
 
   &__inner {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 56px 96px 48px;
@@ -100,6 +101,40 @@ h1, h2, h3, h4, p, ul {
 
   .contact__pdf a {
     color: $header-accent;
+  }
+
+}
+
+// Language toggle: segmented "EN | JA" pill in the header corner
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 96px;
+  display: flex;
+  padding: 2px;
+  border: 1px solid #3F3F46;
+  border-radius: 999px;
+  font-family: $mono;
+  font-size: 12px;
+  line-height: 1;
+
+  a {
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: #D4D4D8;
+    text-decoration: none;
+
+    &:hover {
+      color: #FFFFFF;
+      background: #27272A;
+    }
+
+    &[aria-current="page"] {
+      background: $header-accent;
+      color: $header-bg;
+      font-weight: 500;
+      pointer-events: none;
+    }
   }
 }
 
@@ -303,8 +338,13 @@ h1, h2, h3, h4, p, ul {
 // ---------- Small screens ----------
 
 @media screen and (max-width: 860px) {
+  .lang-switch {
+    top: 16px;
+    right: 20px;
+  }
+
   .site-header__inner {
-    padding: 40px 20px 32px;
+    padding: 56px 20px 32px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -366,8 +406,8 @@ h1, h2, h3, h4, p, ul {
     font-size: 9.5pt;
   }
 
-  // The PDF itself doesn't need a "download PDF" link
-  .contact__pdf {
+  // Links that only make sense on the web (PDF download, language switch)
+  .web-only {
     display: none;
   }
 

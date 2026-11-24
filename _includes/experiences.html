@@ -1,29 +1,35 @@
+{% include i18n.html %}
 {% assign experiences = site.data.data.experiences %}
 {% if experiences %}
 <section class="section">
-  <h2 class="section-title">Experience</h2>
+  <h2 class="section-title">{{ L.experience }}</h2>
 
   {% for experience in experiences %}
+  {% assign c = tr.companies[experience.id] %}
   <div class="company">
     <div class="company__head">
-      <h3 class="company__name">{{ experience.company | escape }}</h3>
-      <span class="company__time">{{ experience.time | escape }}</span>
+      <h3 class="company__name">{{ c.company | default: experience.company | escape }}</h3>
+      <span class="company__time">{{ c.time | default: experience.time | escape }}</span>
     </div>
 
     {% for project in experience.project %}
+    {% assign p = tr.projects[project.id] %}
+    {% assign scale = p.scale | default: project.scale %}
+    {% assign role = p.role | default: project.role %}
     <article class="project">
-      <h4 class="project__name">{{ project.name | escape }}</h4>
+      <h4 class="project__name">{{ p.name | default: project.name | escape }}</h4>
       <p class="project__meta">
-        {% if project.scale %}<span><span class="label">Team</span> {{ project.scale | escape }}</span>{% endif %}
-        {% if project.role %}<span><span class="label">Role</span> {{ project.role | escape }}</span>{% endif %}
+        {% if scale %}<span><span class="label">{{ L.team }}</span> {{ scale | escape }}</span>{% endif %}
+        {% if role %}<span><span class="label">{{ L.role }}</span> {{ role | escape }}</span>{% endif %}
       </p>
       {% if project.stack %}
       <ul class="tags">
         {% for tech in project.stack %}<li>{{ tech | escape }}</li>{% endfor %}
       </ul>
       {% endif %}
-      {% if project.details %}
-      <div class="project__details">{{ project.details | markdownify }}</div>
+      {% assign details = p.details | default: project.details %}
+      {% if details %}
+      <div class="project__details">{{ details | markdownify }}</div>
       {% endif %}
     </article>
     {% endfor %}

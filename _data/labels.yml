@@ -1,0 +1,21 @@
+# UI text per language. Pages pick a language with `lang:` in front matter (default: en).
+en:
+    title: Resume
+    experience: Experience
+    skills: Skills
+    about: About
+    languages: Languages
+    interests: Interests
+    team: Team
+    role: Role
+    download_pdf: Download PDF ↓
+ja:
+    title: 職務経歴書
+    experience: 職務経歴
+    skills: スキル
+    about: その他
+    languages: 語学
+    interests: 趣味
+    team: 規模
+    role: 担当
+    download_pdf: PDFをダウンロード ↓
