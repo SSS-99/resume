@@ -18,7 +18,7 @@ jobs:
   pdf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: ruby/setup-ruby@v1
         with:
@@ -26,7 +26,8 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll build
+        # Empty baseurl so the site works when served from the root below
+        run: bundle exec jekyll build --baseurl ""
         env:
           JEKYLL_ENV: production
 

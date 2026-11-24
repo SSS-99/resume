@@ -1,68 +1,48 @@
-
 # Resume
 
-https://SSS-99.github.io/resume/
+https://sss-99.github.io/resume/
 
+A Jekyll site published with GitHub Pages ("Deploy from a branch", `main` / root).
 
+## Editing
 
-<!-- <a href="https://jekyll-themes.com">
-<img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+All content lives in [`_data/data.yml`](_data/data.yml):
 
-# Orbit
-> This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/). 
-> Visit her [website](http://themes.3rdwavemedia.com/) for more themes.
+- `sidebar` — name, tagline, contact links, languages, interests
+- `experiences` — companies and their projects (`scale`, `role`, `stack`)
+- `skills` — skill groups; an item with its own `items` list expands on the web and shows only its name in the PDF
 
-I have made this into a Jekyll Theme. Checkout the live demo [here](https://online-cv.webjeda.com).
+Push to `main` and GitHub Pages rebuilds the site.
 
-<table>
-  <tr>
-    <th>Desktop</th>
-    <th>Mobile</th>
-  </tr>
-  <tr>
-    <td>
-        <img src="https://online-cv.webjeda.com/assets/images/desktop.png?raw=true" width="600"/>
-    </td>
-    <td>
-        <img src="https://online-cv.webjeda.com/assets/images/mobile.png?raw=true" width="250"/>
-    </td>
-  </tr>
-</table>
+## PDF
 
-## Installation
+[`.github/workflows/resume-pdf.yml`](.github/workflows/resume-pdf.yml) runs on every push to `main`: it builds the site, prints it with headless Chrome, and commits the result to `assets/resume.pdf`. Run `git pull` before your next edit to pick up that commit.
 
-* [Fork](https://github.com/sharu725/online-cv/fork) the repository
-* Delete the `gh-pages` branch
-* Re-create the `gh-pages` branch
-* Go to settings and set Github Pages source as master.
-* Your new site should be ready at `https://username.github.io/online-cv/`
+Print styles are in the `@media print` blocks of [`_sass/_resume.scss`](_sass/_resume.scss).
 
-Change all the details from one place: ``_data/data.yml``
+## Local preview
 
-Watch my [video](https://www.youtube.com/embed/T2nx6tj-ZH4) on installation.
+```sh
+bundle install
+bundle exec jekyll serve
+# http://localhost:4000/resume/
+```
 
-## Skins
+Or with Docker:
 
-There are 6 color schemes available:
+```sh
+docker run --rm -it -p 4000:4000 -v "$PWD":/srv -w /srv ruby:3.3 \
+  sh -c 'bundle install && bundle exec jekyll serve --host 0.0.0.0'
+```
 
-| Blue | Turquoise | Green |
-|---------|---------|---------|
-| <img src="https://online-cv.webjeda.com/assets/images/blue.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/turquoise.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/green.jpg" width="300"/> |
+## Layout
 
-| Berry | Orange | Ceramic |
-|---------|---------|---------|
-| <img src="https://online-cv.webjeda.com/assets/images/berry.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/orange.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/ceramic.jpg" width="300"/> |
+| Path | Purpose |
+|---|---|
+| `_layouts/default.html` | Page skeleton |
+| `_includes/header.html` | Name, tagline, contact links |
+| `_includes/experiences.html` | Experience section |
+| `_includes/sidebar.html`, `_includes/skills.html` | Skills, languages, interests |
+| `_sass/_resume.scss` | All styles, including print |
 
-## Credits
-
-Thanks to [Nelson Estevão](https://github.com/nelsonmestevao) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=nelsonmestevao).
-
-Thanks to [t-h-e(sfrost)](https://github.com/t-h-e) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=t-h-e).
-
-Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=sharu725/online-cv&type=Date)](https://star-history.com/#sharu725/online-cv&Date)
- -->
+Originally based on the [online-cv](https://github.com/sharu725/online-cv) Jekyll theme; the design has since been rewritten.

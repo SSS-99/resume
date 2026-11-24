@@ -1,9 +1,7 @@
 source "https://rubygems.org"
 
-# gem "rails"
-gem "jekyll"
-gem 'github-pages'
+# Match the versions GitHub Pages builds with (https://pages.github.com/versions/)
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+# Needed for `jekyll serve` on Ruby 3.x
+gem "webrick", "~> 1.8"
