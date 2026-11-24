@@ -4,7 +4,7 @@
 # Keys under `companies` / `projects` match the `id` fields in data.yml.
 
 sidebar:
-    # name: 小澤 栞   # uncomment to show a Japanese name
+    # name:   # uncomment to show a different name on the Japanese page
     tagline: ITコンサルタント / エンジニア
     pdf: https://sss-99.github.io/resume/assets/resume-ja.pdf
 
@@ -21,7 +21,7 @@ sidebar:
 
 companies:
     emoba:
-        company: Emoba inc.
+        company: エモバ株式会社
         time: 2020/06 - 現在
     freelance:
         company: フリーランス
